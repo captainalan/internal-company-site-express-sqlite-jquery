@@ -1,0 +1,18 @@
+{
+  "name": "employee_data_management",
+  "version": "0.0.1",
+  "description": "Integrating SQLite and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan Wong",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "pug": "^2.0.3",
+    "sqlite": "^3.0.3"
+  }
+}
