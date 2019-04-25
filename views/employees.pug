@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-12")
+        h1= title
+
+        p Here are the company's employees as stored in an SQLite database!
+
+        table(class="table")
+          // headers
+          thead
+            tr
+              th(scope="col") Name
+              th(scope="col") Position
+          // data
+          tbody
+            each employee in employees
+              tr
+                td= employee.name 
+                td= employee.position
+
+        p Now I just need to add CRUD functionalities.

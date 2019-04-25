@@ -8,8 +8,11 @@ const dbPromise = sqlite.open('foo.db', { Promise });
 
 app.set('view engine', 'pug');
 
+// Must serve static assets (e.g. stylesheets) somewhere
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Hey', message: 'Hello there!' });
+  res.send('Uhhh.....');
 });
 
 // TODO: Add routes to add/modify/delete employees
@@ -19,8 +22,12 @@ app.get('/employees', async (req, res, next) => {
     const db = await dbPromise;
     const employees = await Promise.all([
       db.all('SELECT * FROM employees')
-    ]);
-    res.json(employees);
+    ]).then((data) => {
+      res.render('employees', {
+        title: "Employees", 
+        employees: data[0] // I think because I used db.all... I have to use 0th index
+      });
+    });
   } catch (err) {
     next(err); 
   }
@@ -37,5 +44,6 @@ app.get('/employee/:id', async (req, res, next) => {
     next(err);
   }
 });
+
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
