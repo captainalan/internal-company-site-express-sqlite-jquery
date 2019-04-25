@@ -1,13 +1,20 @@
 extends layout.pug
 
 block content
+  div(class="jumbotron")
+    h1(class="display-4")= title
+    p(class="lead") Get hyped get hyped get hyped
+    hr
+    p ...more description of stuff here...
+    a(class="btn btn-primary btn-lg", href="#", role="button") Learn more
   div(class="container")
     div(class="row")
       div(class="col-md-12")
-        h1= title
 
         p See our 
           a(href="./employees") awesome employees. 
           | There will be more.
+          | Do we need a 
+          a(href="./employee/new") new employee?
 
 

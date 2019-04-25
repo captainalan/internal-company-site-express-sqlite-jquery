@@ -35,6 +35,11 @@ app.get('/employees', async (req, res, next) => {
   }
 });
 
+app.get('/employee/new', async(req, res, next) => {
+  // GET route renders teh form 
+  res.render('new-employee', {});
+});
+
 app.get('/employee/:id', async (req, res, next) => {
   try {
     const db = await dbPromise;
