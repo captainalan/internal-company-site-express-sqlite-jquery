@@ -12,7 +12,9 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('Uhhh.....');
+  res.render('index', {
+    title: "Company Site"
+  });
 });
 
 // TODO: Add routes to add/modify/delete employees
