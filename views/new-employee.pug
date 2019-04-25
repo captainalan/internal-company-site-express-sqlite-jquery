@@ -6,3 +6,17 @@ block content
       div(class="col-md-12")
         h1 New Employee Form
         p Here, a form will be found.
+
+        form
+          div(class="form-group")
+            label(for="name") Employee name
+            input(type="text", class="form-control", id="inputName", placeholder="e.g. Abraham Lincoln")
+          div(class="form-group")
+            label(for="position") Position name
+            input(type="text", class="form-control", id="inputPosition", placeholder="e.g. Underwater Basket Weaver")
+          // Add more inputs here
+          button(type="submit", class="btn btn-primary") Submit
+
+          // ID just be generated automatically
+          // Date started should be the current day
+          // ...other fields hmmm...
