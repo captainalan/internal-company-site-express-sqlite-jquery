@@ -10,11 +10,17 @@ html
     link(rel="stylesheet", href="/assets/css/mystyle.css")
     block scripts
   body
+    block status_header
+      div(class="statusHeader")
+        a(href="/") Home
+        a(href="/employees") Employees
+        span(id="login-status") Online 
+
     block content
     block foot
       #footer
         hr
-        p(id="footer") A most excellent footer
+        p(id="footer") A most excellent footer made in 2019.
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js",
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
       crossorigin="anonymous")
