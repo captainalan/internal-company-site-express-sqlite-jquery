@@ -8,15 +8,25 @@ block content
         p Here, a form will be found.
 
         form
-          div(class="form-group")
-            label(for="name") Employee name
-            input(type="text", class="form-control", id="inputName", placeholder="e.g. Abraham Lincoln")
-          div(class="form-group")
-            label(for="position") Position name
-            input(type="text", class="form-control", id="inputPosition", placeholder="e.g. Underwater Basket Weaver")
-          // Add more inputs here
-          button(type="submit", class="btn btn-primary") Submit
 
-          // ID just be generated automatically
-          // Date started should be the current day
-          // ...other fields hmmm...
+          div(class="form-group")
+            label(for="inputName") Employee name
+            input(type="text", class="form-control", id="inputName", placeholder="e.g. Abraham Lincoln")
+
+          div(class="form-group")
+            label(for="inputPosition") Position name
+            input(type="text", class="form-control", id="inputPosition", placeholder="e.g. Underwater Basket Weaver")
+
+          div(class="form-group")
+            label(for="inputDateStarted") Date started
+            input(type="text", class="form-control", id="inputDateStarted", placeholder="MM/DD/YYYY")
+
+          div(class="form-group")
+            label(for="inputMonthsWorked") Months worked
+            input(type="text", class="form-control", id="inputMonthsWorked", placeholder="e.g. 5")
+
+          br
+          button(type="submit", class="btn btn-primary" id="form-submit") Submit
+
+block body_scripts
+  script(src="/assets/scripts/new-employee.js")
