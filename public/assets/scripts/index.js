@@ -2,7 +2,6 @@ $(document).ready(function(){
   console.log("Index page is ready!")
 
   $('#learn-more-button').click(function(event){
-    event.preventDefault(); 
-    console.log("You wanna learn more?!");
+      window.location("/about"); // Why don't I just make a link?
   });
 });

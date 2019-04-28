@@ -21,7 +21,34 @@ html
     block foot
       #footer
         hr
-        p(id="footer") A most excellent footer made in 2019.
+        div(class="container" id="footer")
+          div(class="row")
+            div(class="col-sm-3")
+              h5 Real world
+              p Company HQ
+                br
+                | 1111 Industry Drive
+                br
+                | Corporateville, CA 99999
+              p (888) 888-EIGHT
+            div(class="col-sm-3")
+              h5 Our Company
+              ul
+                li Wiki
+                li Github
+
+            div(class="col-sm-3")
+              h5 Social Media
+              ul
+                li Facebook
+                li Instagram
+                li Twitter
+            div(class="col-sm-3")
+              h5 This site
+              p Copyright 2019
+              p Alan W
+              p(class="snark") ^ blame him if anything goes wrong
+
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js",
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
       crossorigin="anonymous")

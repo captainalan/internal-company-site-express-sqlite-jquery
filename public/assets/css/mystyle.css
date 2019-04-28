@@ -1,7 +1,8 @@
 .statusHeader {
   padding: 5px;
+  margin-bottom: 15px;
   color: #333;
-  background-image: linear-gradient(to right, lightgrey, white);
+  background-image: linear-gradient(to bottom, #e9ecef, white);
   height: 35px;
 }
 
@@ -20,7 +21,13 @@
 }
 
 #footer {
-  margin-left: 20px;
-  margin-right: 20px;
-  color: lightgrey;
+  color: grey;
+}
+
+#footer ul {
+  list-style-type: circle;
+}
+
+.snark {
+  color: orange;
 }

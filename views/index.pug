@@ -2,14 +2,14 @@ extends layout.pug
 
 block content
   div(class="jumbotron")
-    h1(class="display-4")= title
+    h1(class="display-4") Welcome, employee.
     p(class="lead") This is a clean-looking internal company site. 
     hr
     p Right now, it is running on 
       code localhost 
       | but you could actually upload it to the internet. Make sure all the
       | security stuff is in order before doing that though, bucko.
-    a(class="btn btn-primary btn-lg", href="#", role="button", id="learn-more-button") Learn more
+    a(class="btn btn-primary btn-lg", href="/about", role="button", id="learn-more-button") Learn more
   div(class="container")
     div(class="row")
       div(class="col-md-6")
