@@ -7,18 +7,37 @@ block content
         h1= title
 
         p Here are the company's employees as stored in an SQLite database!
+        p You can also add a 
+          a(href="employee/new") new employee 
+          | to the database.
 
         table(class="table")
           // headers
           thead
             tr
+              th(scope="col") ID
               th(scope="col") Name
               th(scope="col") Position
+              th(scope="col") Date Started
+              th(scope="col") Months Worked
+              th(scope="col") Hourly Rate 
+              th(scope="col") Total Billed
+              th(scope="col") 
           // data
           tbody
             each employee in employees
               tr
+                td= employee.id
                 td= employee.name 
                 td= employee.position
+                td= employee.date_started
+                td= employee.months_worked
+                td= employee.hourly_rate
+                td= employee.total_billed
+                td(class="editButton", data-employee-id=employee.id)
+                  button(class="btn btn-link") Edit
 
         p Now I just need to add CRUD functionalities.
+
+block body_scripts
+  script(src="assets/scripts/employees.js")

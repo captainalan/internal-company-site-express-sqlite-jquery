@@ -7,6 +7,10 @@
     - [ ] Complete `new-employee.pug` form
 - [ ] Add a navbar to `layout.pug` for navigating the entire site.
 - [x] Display employee names/positions as retrieved from database
+- [ ] Add edit button to edit employee data
+- [ ] Add honeypot "backdoor" which records user info
+    - This page shoudln't be accessed by normal users; log infos of ppl that
+      visit it (e.g. with a scraper)
 
 ## Questions
 

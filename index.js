@@ -40,6 +40,12 @@ app.get('/employee/new', async(req, res, next) => {
   res.render('new-employee', {});
 });
 
+// Specify employee by ID; later make these paths different from database IDs
+// for security purposes...
+app.get('/employee/edit/:userId', async(req, res, next) => {
+  res.render('edit-employee', {});
+});
+
 app.get('/employee/:id', async (req, res, next) => {
   try {
     const db = await dbPromise;
