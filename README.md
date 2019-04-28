@@ -4,7 +4,8 @@
 - [ ] Make generated dates in a consistent string format (consider using a
   library like moment.js)
 - [ ] Add POST route for making new employees
-    - [ ] Complete `new-employee.pug` form
+    - [x] Complete `new-employee.pug` form
+- [ ] Add PUT route for editing existing employees
 - [ ] Add a navbar to `layout.pug` for navigating the entire site.
 - [x] Display employee names/positions as retrieved from database
 - [ ] Add edit button to edit employee data

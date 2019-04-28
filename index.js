@@ -17,7 +17,11 @@ app.get('/', (req, res) => {
   });
 });
 
-// TODO: Add routes to add/modify/delete employees
+app.get('/about', (req, res) => {
+  res.render('about', {
+    // Nothing to pass now
+  });
+});
 
 app.get('/employees', async (req, res, next) => {
   try {
