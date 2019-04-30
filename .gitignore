@@ -3,3 +3,6 @@ node_modules/
 
 # Editor things
 \#*\#
+
+# Backup database
+bar.db

@@ -30,6 +30,8 @@ This is a full-stack web app built with Node, Express (routing), pug
 
 - Since we have `id` set as INTEGER PRIMARY KEY, will it automatically make new
   unique IDs if I don't explicitely set it?
+- SQLite doesn't have a native data type for dates; I'll stick with using
+  consistent strings for now...
 
 ## Other Notes
 

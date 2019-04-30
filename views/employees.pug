@@ -34,8 +34,9 @@ block content
                 td= employee.months_worked
                 td= employee.hourly_rate
                 td= employee.total_billed
-                td(class="editButton", data-employee-id=employee.id)
-                  button(class="btn btn-link") Edit
+                td(data-employee-id=employee.id)
+                  button(class="btn btn-link editButton") Edit
+                  button(class="btn btn-link deleteButton") Delete
 
         p Now I just need to add CRUD functionalities.
 

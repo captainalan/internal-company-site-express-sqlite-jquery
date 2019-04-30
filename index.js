@@ -46,7 +46,8 @@ app.get('/employee/new', async(req, res, next) => {
 
 // Specify employee by ID; later make these paths different from database IDs
 // for security purposes...
-app.get('/employee/edit/:userId', async(req, res, next) => {
+app.route('/employee/edit/:id')
+.get(async(req, res, next) => {
   res.render('edit-employee', {});
 })
 .post(async(req, res, next) => {
@@ -56,11 +57,19 @@ app.get('/employee/edit/:userId', async(req, res, next) => {
   res.send("Updating an employee...");
 })
 .delete(async(req, res, next) => {
-  const db = await dbPromise;
-  const employee = await Promise.resolve(
-    db.get('DELETE * FROM employees WHERE id = ?', req.params.id)
-  );
-  res.json(employee);
+  try {
+    const db = await dbPromise;
+    await Promise.resolve(
+      // Ooooh! dangerous!
+      db.run('DELETE FROM employees WHERE id = ?', req.params.id)
+    ).then(() => {
+      console.log("Going...");  
+      res.redirect(200, 'back')
+    });
+  } catch (err) {
+    // next(err);
+    res.send(`error: ${err}`);
+  }
 });
 
 app.get('/employee/:id', async (req, res, next) => {
