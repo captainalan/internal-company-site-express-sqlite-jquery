@@ -48,12 +48,14 @@ app.get('/employee/new', async(req, res, next) => {
 // for security purposes...
 app.route('/employee/edit/:id')
 .get(async(req, res, next) => {
+  // Display edit form here
   res.render('edit-employee', {});
 })
 .post(async(req, res, next) => {
   res.send("Making a new employee...");
 })
 .put(async(req, res, next) => {
+  // On submitting edit form, use put method to update record
   res.send("Updating an employee...");
 })
 .delete(async(req, res, next) => {

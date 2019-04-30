@@ -5,17 +5,18 @@ block content
     div(class="row")
       div(class="col-md-12")
         h1 New Employee Form
-        p Here, a form will be found.
+        p Enter the requested information and then click 'Submit' at the bottom 
+          | of the form.
 
         form
 
           div(class="form-group")
             label(for="inputName") Employee name
-            input(type="text", class="form-control", id="inputName", placeholder="e.g. Abraham Lincoln")
+            input(type="text", class="form-control", id="inputName", placeholder="Abraham Lincoln")
 
           div(class="form-group")
             label(for="inputPosition") Position name
-            input(type="text", class="form-control", id="inputPosition", placeholder="e.g. Underwater Basket Weaver")
+            input(type="text", class="form-control", id="inputPosition", placeholder="Underwater Basket Weaver")
 
           div(class="form-group")
             label(for="inputDateStarted") Date started
@@ -23,7 +24,15 @@ block content
 
           div(class="form-group")
             label(for="inputMonthsWorked") Months worked
-            input(type="text", class="form-control", id="inputMonthsWorked", placeholder="e.g. 5")
+            input(type="text", class="form-control", id="inputMonthsWorked", placeholder="0")
+
+          div(class="form-group")
+            label(for="inputHourlyRate") Hourly Rate
+            input(type="text", class="form-control", id="inputHourlayRate", placeholder="15.00")
+
+          div(class="form-group")
+            label(for="inputTotalBilled") Total Billed
+            input(type="text", class="form-control", id="inputTotalBilled", placeholder="0")
 
           br
           button(type="submit", class="btn btn-primary" id="form-submit") Submit
