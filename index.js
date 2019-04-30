@@ -40,7 +40,7 @@ app.get('/employees', async (req, res, next) => {
 });
 
 app.get('/employee/new', async(req, res, next) => {
-  // GET route renders teh form 
+  // GET route renders the form 
   res.render('new-employee', {});
 });
 
@@ -48,6 +48,19 @@ app.get('/employee/new', async(req, res, next) => {
 // for security purposes...
 app.get('/employee/edit/:userId', async(req, res, next) => {
   res.render('edit-employee', {});
+})
+.post(async(req, res, next) => {
+  res.send("Making a new employee...");
+})
+.put(async(req, res, next) => {
+  res.send("Updating an employee...");
+})
+.delete(async(req, res, next) => {
+  const db = await dbPromise;
+  const employee = await Promise.resolve(
+    db.get('DELETE * FROM employees WHERE id = ?', req.params.id)
+  );
+  res.json(employee);
 });
 
 app.get('/employee/:id', async (req, res, next) => {
@@ -61,6 +74,5 @@ app.get('/employee/:id', async (req, res, next) => {
     next(err);
   }
 });
-
 
 app.listen(port, () => console.log(`App listening on port ${port}`));

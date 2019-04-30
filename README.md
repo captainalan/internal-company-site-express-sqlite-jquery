@@ -18,7 +18,7 @@ This is a full-stack web app built with Node, Express (routing), pug
     - This page shoudln't be accessed by normal users; log infos of ppl that
       visit it (e.g. with a scraper)
 - [ ] Add **news** table to database which holds company news
-    - [ ]Add previews of news stories to homepage
+    - [ ] Add previews of news stories to homepage
 
 ## Questions
 
@@ -34,3 +34,5 @@ This is a full-stack web app built with Node, Express (routing), pug
 ## Other Notes
 
 - top-bottom linear gradient doesn't display correctly in Brave browser
+- For this project, I'm keeping things simple and [avoiding using an
+  ORM](https://blog.logrocket.com/why-you-should-avoid-orms-with-examples-in-node-js-e0baab73fa5)
