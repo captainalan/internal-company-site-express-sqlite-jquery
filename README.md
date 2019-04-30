@@ -38,3 +38,7 @@ This is a full-stack web app built with Node, Express (routing), pug
 - top-bottom linear gradient doesn't display correctly in Brave browser
 - For this project, I'm keeping things simple and [avoiding using an
   ORM](https://blog.logrocket.com/why-you-should-avoid-orms-with-examples-in-node-js-e0baab73fa5)
+
+## Other ppl's stuff (besides code/libraries)
+
+- [Sanford Robinson Gifford - Indian Summer in the White Mountains - Google Art Project.jpg](https://commons.wikimedia.org/wiki/File:Sanford_Robinson_Gifford_-_Indian_Summer_in_the_White_Mountains_-_Google_Art_Project.jpg)

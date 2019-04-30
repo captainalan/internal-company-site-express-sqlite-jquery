@@ -1,3 +1,8 @@
+.jumbotron {
+  background-image: url("/images/Sanford_Robinson_Gifford_-_Indian_Summer_in_the_White_Mountains_-_Google_Art_Project.jpg");
+  background-position: center;
+  background-size: cover;
+}
 .statusHeader {
   padding: 5px;
   margin-bottom: 15px;
