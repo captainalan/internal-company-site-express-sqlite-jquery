@@ -3,9 +3,12 @@
 This is a full-stack web app built with Node, Express (routing), pug
 (templating), jQuery (client-side scripting), and SQLite (database).
 
+Basic CRUD operations ~~are~~ will be supported on a table of employees.
+
 
 ## TODO
 
+- [ ] Build a preview/exported/static site to display on Github Pages
 - [ ] Make generated dates in a consistent string format (consider using a
   library like moment.js)
 - [ ] Add POST route for making new employees
