@@ -3,6 +3,18 @@
   background-position: center;
   background-size: cover;
 }
+.jumbotron h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+  color: black;
+}
+.jumbotron p {
+  color: white;
+  font-weight: bold;
+}
+.jumbotron code {
+  color: #333;
+}
+
 .statusHeader {
   padding: 5px;
   margin-bottom: 15px;
