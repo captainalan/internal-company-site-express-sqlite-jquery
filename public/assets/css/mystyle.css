@@ -15,6 +15,14 @@
   color: #333;
 }
 
+img {
+  max-width: 100% /* Keep images contained in blocks */
+}
+figcaption {
+  color: grey;
+  padding: 10px;
+}
+
 .statusHeader {
   padding: 5px;
   margin-bottom: 15px;
@@ -38,13 +46,16 @@
 }
 
 #footer {
-  color: grey;
+  width: 100%;
+  background-image: linear-gradient(to top, #e5bd9c, white);
+  color: black;
+}
+
+#footer h1, h2, h3, h4, h5 {
+  font-weight: bold;
 }
 
 #footer ul {
-  list-style-type: circle;
-}
-
-.snark {
-  color: orange;
+  padding: 0px;
+  list-style-type: none;
 }

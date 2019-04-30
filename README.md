@@ -42,3 +42,4 @@ This is a full-stack web app built with Node, Express (routing), pug
 ## Other ppl's stuff (besides code/libraries)
 
 - [Sanford Robinson Gifford - Indian Summer in the White Mountains - Google Art Project.jpg](https://commons.wikimedia.org/wiki/File:Sanford_Robinson_Gifford_-_Indian_Summer_in_the_White_Mountains_-_Google_Art_Project.jpg)
+- [Heavy industry - Ant Roztsky](https://unsplash.com/photos/SLIFI67jv5k)
