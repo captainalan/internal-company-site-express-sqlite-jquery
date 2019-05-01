@@ -48,8 +48,18 @@ app.get('/employee/new', async(req, res, next) => {
 // for security purposes...
 app.route('/employee/edit/:id')
 .get(async(req, res, next) => {
+  try {
+    const db = await dbPromise;
+    const employee = await Promise.resolve(
+      db.get('SELECT * FROM employees WHERE id = ?', req.params.id)
+    );
+    res.render('edit-employee', {
+      "employee": employee
+    });
+  } catch (err) {
+    next(err);
+  }
   // Display edit form here
-  res.render('edit-employee', {});
 })
 .post(async(req, res, next) => {
   res.send("Making a new employee...");

@@ -27,7 +27,8 @@ Basic CRUD operations ~~are~~ will be supported on a table of employees.
 
 ### Node/Express
 
-- (None yet)
+- Are there some well-established tools for building static websites from Express apps?
+    - Or, should I just do a little bit of web scraping on my own site...
 
 ### SQLite
 

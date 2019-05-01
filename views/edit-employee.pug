@@ -4,33 +4,32 @@ block content
   div(class="container")
     div(class="row")
       div(class="col-md-12")
-        h1 Edit Employee Form
-        p (Populate this form with existing values in database.)
+        h1 Edit Employee
 
         form
           div(class="form-group")
             label(for="inputName") Employee name
-            input(type="text", class="form-control", id="inputName", placeholder="Abraham Lincoln")
+            input(type="text", class="form-control", id="inputName", value=employee.name)
 
           div(class="form-group")
             label(for="inputPosition") Position name
-            input(type="text", class="form-control", id="inputPosition", placeholder="Underwater Basket Weaver")
+            input(type="text", class="form-control", id="inputPosition", value=employee.position)
 
           div(class="form-group")
             label(for="inputDateStarted") Date started
-            input(type="text", class="form-control", id="inputDateStarted", placeholder="MM/DD/YYYY")
+            input(type="text", class="form-control", id="inputDateStarted", value=employee.date_started)
 
           div(class="form-group")
             label(for="inputMonthsWorked") Months worked
-            input(type="text", class="form-control", id="inputMonthsWorked", placeholder="0")
+            input(type="text", class="form-control", id="inputMonthsWorked", value=employee.months_worked)
 
           div(class="form-group")
             label(for="inputHourlyRate") Hourly Rate
-            input(type="text", class="form-control", id="inputHourlayRate", placeholder="15.00")
+            input(type="text", class="form-control", id="inputHourlayRate", value=employee.hourly_rate)
 
           div(class="form-group")
             label(for="inputTotalBilled") Total Billed
-            input(type="text", class="form-control", id="inputTotalBilled", placeholder="0")
+            input(type="text", class="form-control", id="inputTotalBilled", value=employee.total_billed)
 
           br
           span
