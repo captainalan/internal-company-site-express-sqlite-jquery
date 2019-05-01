@@ -65,7 +65,6 @@ app.route('/employee/edit/:id')
       // Ooooh! dangerous!
       db.run('DELETE FROM employees WHERE id = ?', req.params.id)
     ).then(() => {
-      console.log("Going...");  
       res.redirect(200, 'back')
     });
   } catch (err) {
