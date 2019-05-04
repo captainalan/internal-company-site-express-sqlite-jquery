@@ -6,3 +6,7 @@ node_modules/
 
 # Backup database
 bar.db
+
+# Apple things
+*.icloud
+DS_Store
