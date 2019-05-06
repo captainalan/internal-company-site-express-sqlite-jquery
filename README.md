@@ -3,6 +3,10 @@
 This is a full-stack web app built with Node, Express (routing), pug
 (templating), jQuery (client-side scripting), and SQLite (database).
 
+When deployed, it will look something like this:
+
+![Screenshot](screenshot.png)
+
 Basic CRUD operations ~~are~~ will be supported on a table of employees.
 
 
