@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const Promise = require('bluebird');
 const sqlite = require('sqlite');
 
@@ -10,6 +11,9 @@ app.set('view engine', 'pug');
 
 // Must serve static assets (e.g. stylesheets) somewhere
 app.use(express.static('public'));
+
+// Parse various different custom JSON types as JSON
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.render('index', {
@@ -61,9 +65,6 @@ app.route('/employee/edit/:id')
   }
   // Display edit form here
 })
-.post(async(req, res, next) => {
-  res.send("Making a new employee...");
-})
 .put(async(req, res, next) => {
   // On submitting edit form, use put method to update record
   res.send("Updating an employee...");
@@ -75,12 +76,16 @@ app.route('/employee/edit/:id')
       // Ooooh! dangerous!
       db.run('DELETE FROM employees WHERE id = ?', req.params.id)
     ).then(() => {
-	res.redirect(200, 'back');
+			res.redirect(200, 'back');
     });
   } catch (err) {
     // next(err);
     res.send(`error: ${err}`);
   }
+});
+app.post('/employee/new', async (req, res, next) => {
+  console.log("You sent something", req.body);
+  res.send("greeting from the server");
 });
 
 app.get('/employee/:id', async (req, res, next) => {
