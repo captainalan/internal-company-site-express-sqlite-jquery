@@ -11,30 +11,50 @@ block content
         form
           div(class="form-group")
             label(for="inputName") Employee name
-            input(type="text", class="form-control", id="inputName", placeholder="Abraham Lincoln")
+            input(type="text", 
+	          class="form-control",
+		  id="inputName",
+		  placeholder="Abraham Lincoln")
 
           div(class="form-group")
             label(for="inputPosition") Position name
-            input(type="text", class="form-control", id="inputPosition", placeholder="Underwater Basket Weaver")
+            input(type="text",
+	          class="form-control",
+                  id="inputPosition",
+                  placeholder="Underwater Basket Weaver")
 
           div(class="form-group")
             label(for="inputDateStarted") Date started
-            input(type="text", class="form-control", id="inputDateStarted", placeholder="MM/DD/YYYY")
+            input(type="text",
+                  class="form-control",
+                  id="inputDateStarted",
+	          placeholder="MM/DD/YYYY")
 
           div(class="form-group")
             label(for="inputMonthsWorked") Months worked
-            input(type="text", class="form-control", id="inputMonthsWorked", placeholder="0")
+            input(type="text",
+                  class="form-control",
+	          id="inputMonthsWorked",
+                  placeholder="0")
 
           div(class="form-group")
             label(for="inputHourlyRate") Hourly Rate
-            input(type="text", class="form-control", id="inputHourlayRate", placeholder="15.00")
+            input(type="text",
+                  class="form-control",
+                  id="inputHourlayRate",
+                  placeholder="15.00")
 
           div(class="form-group")
             label(for="inputTotalBilled") Total Billed
-            input(type="text", class="form-control", id="inputTotalBilled", placeholder="0")
+            input(type="text",
+                  class="form-control",
+                  id="inputTotalBilled",
+                  placeholder="0")
 
           br
-          button(type="submit", class="btn btn-primary" id="form-submit") Submit
+          button(type="submit",
+                 class="btn btn-primary",
+                 id="form-submit") Submit
 
 block body_scripts
   script(src="/assets/scripts/new-employee.js")
