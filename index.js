@@ -83,6 +83,7 @@ app.route('/employee/edit/:id')
     res.send(`error: ${err}`);
   }
 });
+
 app.post('/employee/new', async (req, res, next) => {
   console.log("You sent something", req.body);
   res.send("greeting from the server");

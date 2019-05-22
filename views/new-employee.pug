@@ -8,18 +8,19 @@ block content
         p Enter the requested information and then click 'Submit' at the bottom 
           | of the form.
 
+        // TODO: Should include some form validation here.
         form
           div(class="form-group")
             label(for="inputName") Employee name
             input(type="text", 
-	          class="form-control",
-		  id="inputName",
-		  placeholder="Abraham Lincoln")
+                  class="form-control",
+                  id="inputName",
+                  placeholder="Abraham Lincoln")
 
           div(class="form-group")
             label(for="inputPosition") Position name
             input(type="text",
-	          class="form-control",
+	              class="form-control",
                   id="inputPosition",
                   placeholder="Underwater Basket Weaver")
 
@@ -28,13 +29,13 @@ block content
             input(type="text",
                   class="form-control",
                   id="inputDateStarted",
-	          placeholder="MM/DD/YYYY")
+                  placeholder="MM/DD/YYYY")
 
           div(class="form-group")
             label(for="inputMonthsWorked") Months worked
             input(type="text",
                   class="form-control",
-	          id="inputMonthsWorked",
+                  id="inputMonthsWorked",
                   placeholder="0")
 
           div(class="form-group")
