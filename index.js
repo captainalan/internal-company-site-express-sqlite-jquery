@@ -3,9 +3,47 @@ const bodyParser = require('body-parser');
 const Promise = require('bluebird');
 const sqlite = require('sqlite');
 
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
 const app = express();
 const port = process.env.PORT || 3000;
 const dbPromise = sqlite.open('foo.db', { Promise });
+
+// Local authentication
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    /*
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { return done(err); }
+      if (!user) { return done(null, false); }
+      if (!user.verifyPassword(password)) { return done(null, false); }
+      return done(null, user);
+    });
+    */
+   console.log("In LocalStrategy thing");
+   console.log(`Username: ${username}, Password: ${password}`);
+   const foo = {
+      id: 1,
+      username: "foo",
+      password: "bar"
+   }
+   return done(null, foo); // For now just auth everyone
+  }, (username, password, done) => {
+    done(null, {});
+  }
+));
+// Authentication persistance
+passport.serializeUser(function(user, cb) {
+  cb(null, user.id);
+});
+
+passport.deserializeUser(function(id, cb) {
+  db.users.findById(id, function (err, user) {
+    if (err) { return cb(err); }
+    cb(null, user);
+  });
+});
 
 app.set('view engine', 'pug');
 
@@ -14,6 +52,48 @@ app.use(express.static('public'));
 
 // Parse various different custom JSON types as JSON
 app.use(bodyParser.json());
+app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+app.use(passport.initialize());
+app.use(passport.session());
+
+// ----------------------------------------------------------------------------
+// Define routes.
+app.get('/',
+  function(req, res) {
+    res.render('home', { user: req.user });
+  });
+
+app.get('/login',
+  function(req, res){
+    res.render('login');
+  });
+  
+app.post('/login', 
+  passport.authenticate('local', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
+  
+app.get('/logout',
+  function(req, res){
+    req.logout();
+    res.redirect('/');
+  });
+
+app.get('/profile',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.render('profile', { user: req.user });
+  });
+// ----------------------------------------------------------------------------
 
 app.get('/', (req, res) => {
   res.render('index', {

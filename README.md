@@ -46,6 +46,7 @@ Basic CRUD operations ~~are~~ will be supported on a table of employees.
 - top-bottom linear gradient doesn't display correctly in Brave browser
 - For this project, I'm keeping things simple and [avoiding using an
   ORM](https://blog.logrocket.com/why-you-should-avoid-orms-with-examples-in-node-js-e0baab73fa5)
+- [Passport with Local Strategy](https://github.com/passport/express-4.x-local-example/blob/master/server.js)
 
 ## Other ppl's stuff (besides code/libraries)
 
