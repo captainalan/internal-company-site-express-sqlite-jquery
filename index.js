@@ -86,7 +86,7 @@ app.route('/employee/edit/:id')
 
 app.post('/employee/new', async (req, res, next) => {
   console.log("You sent something", req.body);
-  res.send("greeting from the server");
+  res.send("greetings from the server");
 });
 
 app.get('/employee/:id', async (req, res, next) => {

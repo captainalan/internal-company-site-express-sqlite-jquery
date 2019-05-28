@@ -7,7 +7,7 @@ $('#form-submit').click(function(event) {
     event.preventDefault(); // Prevents page from resetting
     // Fields that need to be added
     var data = {
-	    name: $('#inputName').val(),
+        name: $('#inputName').val(),
         position: $('#inputPosition').val(),
         date_started: $('#inputDateStarted').val(),
         months_worked: $('#inputMonthsWorked').val(),
